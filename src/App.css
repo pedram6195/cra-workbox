@@ -1,38 +1,85 @@
-.App {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table td,
+table th {
+  border: 1px solid #ddd;
+  padding: 4px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+table tr:hover {
+  background-color: #ddd;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+table th {
+  background-color: #04aa6d;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.save-cache {
+  align-self: center;
+  margin: 16px;
+  padding: 16px;
+}
+
+.text {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.text.online {
+  color: #04aa6d;
+}
+
+.text.offline {
+  color: #ea3536;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: clamp(400px, 50%, 800px);
+  align-self: center;
+}
+
+input,
+.submit {
+  height: 40px;
+}
+
+input {
+  padding-left: 16px;
 }
